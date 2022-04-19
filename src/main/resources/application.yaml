@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: local
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/app_deployer
+    username: postgres
+    password: root
+
+springdoc:
+  api-docs:
+    path: /api
+  swagger-ui:
+    path: /api/swagger.html
+
+vaadin:
+  urlMapping: /ui/*
