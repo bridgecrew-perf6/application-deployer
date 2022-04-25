@@ -19,4 +19,5 @@ springdoc:
 
 vaadin:
   urlMapping: /ui/*
-  whitelisted-packages: com/kovalenko/deployer
+  whitelisted-packages:
+    - com/kovalenko/deployer/frontend/view
