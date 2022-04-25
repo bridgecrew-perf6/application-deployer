@@ -11,6 +11,10 @@ spring:
     username: ${DB_USER}
     password: ${DB_PASSWORD}
 
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
 springdoc:
   api-docs:
     path: /api
