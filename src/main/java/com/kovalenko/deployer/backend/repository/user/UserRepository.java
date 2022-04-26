@@ -1,12 +1,8 @@
 package com.kovalenko.deployer.backend.repository.user;
 
-import com.kovalenko.deployer.backend.model.user.RoleModel;
 import com.kovalenko.deployer.backend.model.user.UserModel;
-import com.kovalenko.deployer.backend.model.user.UserRoleModel;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
-
-import java.util.Set;
 
 @Mapper
 @Repository
@@ -25,7 +21,7 @@ public interface UserRepository {
             @Result(property = "createdAt", column = "created_at"),
             @Result(property = "firstName", column = "first_name"),
             @Result(property = "lastName", column = "last_name"),
-            @Result(property = "roles", column = "user_", many = @Many(select = "com.kovalenko.deployer.backend.repository.user.RoleRepository.findRolesByUser"))
+            @Result(property = "roles", column = "user_", many = @Many(select = "com.kovalenko.deployer.backend.repository.user.RoleRepository.selectRolesByUser"))
     })
     @Select("SELECT user_, login, password, enabled, created_at, first_name, last_name " +
             "FROM users " +
