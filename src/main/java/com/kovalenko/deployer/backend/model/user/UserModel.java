@@ -14,7 +14,7 @@ import java.util.Set;
 @Data
 public class UserModel {
 
-    private Integer user_;
+    private Integer userId;
     private String login;
     private String password;
     private Boolean enabled;

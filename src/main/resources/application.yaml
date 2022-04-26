@@ -25,3 +25,9 @@ vaadin:
   urlMapping: /ui/*
   whitelisted-packages:
     - com/kovalenko/deployer/frontend/view
+
+application:
+  config:
+    default:
+      username: ${DEFAULT_USER_NAME}
+      password: ${DEFAULT_USER_PASSWORD}

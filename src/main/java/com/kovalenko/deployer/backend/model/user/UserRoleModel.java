@@ -9,8 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Data
-public class RoleModel {
+public class UserRoleModel {
 
+    private Integer userRoleId;
+    private Integer userId;
     private Integer roleId;
-    private Role role;
 }
