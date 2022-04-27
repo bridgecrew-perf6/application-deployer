@@ -25,6 +25,8 @@ springdoc:
     path: /api-docs/swagger.html
 
 vaadin:
+  pnpm:
+    enable: true
   urlMapping: /ui/*
   whitelisted-packages:
     - com/kovalenko/deployer/frontend/view
